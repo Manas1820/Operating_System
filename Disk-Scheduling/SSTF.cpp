@@ -1,4 +1,3 @@
-//SSTF disk schduling algorithm
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -45,14 +44,12 @@ void shortestSeekTimeFirst(int request[], int head, int n)
     cout << "Seek sequence is : "
          << "\n";
 
-    // Print
     for (int i = 0; i <= n; i++)
     {
         cout << seeksequence[i] << "\n";
     }
 }
 
-// Driver code
 int main()
 {
     int n = 8;

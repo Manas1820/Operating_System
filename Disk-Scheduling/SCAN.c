@@ -4,8 +4,8 @@ int main()
     int i, j, sum = 0, n;
     int d[20];
     int disk;
-    int temp, max;
-    int dloc;
+    int temp=0, max=0;
+    int temp1;
     printf("enter number of location\t");
     scanf("%d", &n);
     printf("enter position of head\t");
@@ -34,20 +34,21 @@ int main()
     {
         if (disk == d[i])
         {
-            dloc = i;
+            temp1 = i;
             break;
         }
     }
-    for (i = dloc; i >= 0; i--)
+    for (i = temp1; i >= 0; i--)
     {
         printf("%d->", d[i]);
     }
-    printf("0->");
-    for (i = dloc + 1; i < n; i++)
+    printf("Start->");
+    for (i = temp1 + 1; i < n; i++)
     {
         printf("%d->", d[i]);
     }
     sum = disk + max;
-    printf("\nTotal head movements %d", sum);
+    printf("completed");
+    printf("\nTotal seeks %d\n", sum);
     return 0;
 }
